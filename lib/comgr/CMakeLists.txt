@@ -354,7 +354,6 @@ if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
   else()
     set(CPACK_DEBIAN_PACKAGE_RELEASE "local")
   endif()
-  set (CPACK_DEBIAN_PACKAGE_DEPENDS "rocm-core")
 
   # RPM package specific variables
   set(CPACK_RPM_PACKAGE_REQUIRES "ncurses, rocm-core")
@@ -366,7 +365,6 @@ if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
   else()
     set(CPACK_RPM_PACKAGE_RELEASE "local")
   endif()
-  set (CPACK_RPM_PACKAGE_REQUIRES "rocm-core")
 
   # Get rpm distro
   if(CPACK_RPM_PACKAGE_RELEASE)
