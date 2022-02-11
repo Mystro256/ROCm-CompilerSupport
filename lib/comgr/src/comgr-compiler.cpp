@@ -481,7 +481,7 @@ static bool executeAssemblerImpl(AssemblerInvocation &Opts,
         MAB->createObjectWriter(*Out), std::unique_ptr<MCCodeEmitter>(CE), *STI,
         Opts.RelaxAll, Opts.IncrementalLinkerCompatible,
         /*DWARFMustBeAtTheEnd*/ true));
-    Str.get()->initSections(Opts.NoExecStack, *STI);
+    Str.get()->InitSections(Opts.NoExecStack);
   }
 
   bool Failed = false;
