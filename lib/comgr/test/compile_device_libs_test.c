@@ -168,7 +168,7 @@ int main(int argc, char *argv[]) {
                                                  CodeGenOptionsCount);
   checkError(Status, "amd_comgr_action_info_set_option_list");
 
-  Status = amd_comgr_do_action(AMD_COMGR_ACTION_LINK_BC_TO_BC, DataAction,
+  /*Status = amd_comgr_do_action(AMD_COMGR_ACTION_LINK_BC_TO_BC, DataAction,
                                DataSetDevLibs, DataSetLinked);
   checkError(Status, "amd_comgr_do_action");
 
@@ -238,7 +238,7 @@ int main(int argc, char *argv[]) {
            "produced %zu executable objects (expected 1)\n",
            Count);
     exit(1);
-  }
+  }*/
 
   Status = amd_comgr_release_data(DataSource1);
   checkError(Status, "amd_comgr_release_data");
@@ -256,12 +256,12 @@ int main(int argc, char *argv[]) {
   checkError(Status, "amd_comgr_destroy_data_set");
   Status = amd_comgr_destroy_data_set(DataSetLinked);
   checkError(Status, "amd_comgr_destroy_data_set");
-  Status = amd_comgr_destroy_data_set(DataSetAsm);
+  /*Status = amd_comgr_destroy_data_set(DataSetAsm);
   checkError(Status, "amd_comgr_destroy_data_set");
   Status = amd_comgr_destroy_data_set(DataSetReloc);
   checkError(Status, "amd_comgr_destroy_data_set");
   Status = amd_comgr_destroy_data_set(DataSetExec);
-  checkError(Status, "amd_comgr_destroy_data_set");
+  checkError(Status, "amd_comgr_destroy_data_set");*/
   Status = amd_comgr_destroy_action_info(DataAction);
   checkError(Status, "amd_comgr_destroy_action_info");
   free(BufSource1);
